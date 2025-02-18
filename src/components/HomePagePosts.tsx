@@ -14,7 +14,6 @@ export default function HomePagePosts({paginatedPosts}: HomePagePostsProps) {
                 {paginatedPosts.map(post => (
                     <li key={post.id}>
                         <PostRow post={post}/>
-
                     </li>
                 ))}
             </ul>
