@@ -1,5 +1,5 @@
 import React, {Dispatch, SetStateAction} from 'react'
-import {posts, Post, PAGE_SIZE} from '@/public/mod/post';
+import {posts, PAGE_SIZE} from '@/public/mod/post';
 import {MoveLeft, MoveRight} from 'lucide-react';
 
 interface PaginationControlsProps {

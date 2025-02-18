@@ -27,8 +27,8 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
         mono: ["var(--font-geist-mono)", ...fontFamily.mono],
-        nunito: ["var(--font-nunito)", ...fontFamily.sans], // Nunito as primary font
-        cabin: ["var(--font-cabin)", ...fontFamily.sans], // Cabin as secondary font
+        nunito: ["var(--font-nunito)", ...fontFamily.sans], 
+        cabin: ["var(--font-cabin)", ...fontFamily.sans], 
       },
 
     },

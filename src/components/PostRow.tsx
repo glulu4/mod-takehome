@@ -1,7 +1,7 @@
 import {Post} from '@/public/mod/post'
 import {MoveRight} from 'lucide-react';
 import Link from 'next/link';
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {capitalizeFirstLetter} from '../app/util/utils';
 
 interface PostRowProps {

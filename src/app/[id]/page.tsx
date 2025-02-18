@@ -10,7 +10,6 @@ export default function PostPage({params}: PostPageProps) {
 
     const {id} = params;
 
-    // Fetch post data (You may replace this with an actual fetch function)
     const post = fetchPost(parseInt(id));
 
     if (!post) {
