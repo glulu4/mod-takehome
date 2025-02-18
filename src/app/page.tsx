@@ -3,25 +3,35 @@ import Image from "next/image";
 import {useState} from "react";
 import {getPaginatedPosts} from "../lib/get-paginated-post";
 import HomePagePosts from "../components/HomePagePosts";
+import PaginationControls from "../components/PaginationControls";
 
 export default function Home() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
   const paginatedPosts = getPaginatedPosts(currentPage);
+  console.log("paginatedPosts", paginatedPosts.length);
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen p-6 pb-20 gap-16 sm:p-14 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen p-6 pb-20 gap-16 sm:p-14 ">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-7xl">
 
         <h1 className="text-4xl font-bold text-center sm:text-left">
           Mod TakeHome Posts
         </h1>
 
-        <HomePagePosts paginatedPosts={paginatedPosts} />
+        <div className="h-full">
+          <HomePagePosts paginatedPosts={paginatedPosts} />
 
-        {/* <PaginationControls
-          currentPage={currentPage}
-          /> */}
+        </div>
+
+    <div className="flex justify-center w-full pt-10">
+          <PaginationControls
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+    </div>
+
 
 
 
