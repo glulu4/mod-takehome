@@ -9,14 +9,12 @@ interface HomePagePostsProps {
 export default function HomePagePosts({paginatedPosts}: HomePagePostsProps) {
   return (
         
-        <div className='flex flex-col items-start w-full' >
+      <div className='flex flex-col items-start min-w-max' >
             <ul>
                 {paginatedPosts.map(post => (
                     <li key={post.id}>
                         <PostRow post={post}/>
-                        {/* <p>
-                            {post.body}
-                        </p> */}
+
                     </li>
                 ))}
             </ul>

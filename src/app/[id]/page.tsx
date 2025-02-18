@@ -1,3 +1,4 @@
+import PostDisplay from "@/src/components/PostDisplay";
 import {fetchPost} from "@/src/lib/fetch-post";
 import {notFound} from "next/navigation";
 
@@ -13,13 +14,14 @@ export default function PostPage({params}: PostPageProps) {
     const post = fetchPost(parseInt(id));
 
     if (!post) {
-        return notFound(); // Handles 404 if post is not found
+        return notFound(); 
     }
 
     return (
-        <div className="max-w-3xl mx-auto p-6">
-            <h1 className="text-3xl font-bold">{post.title}</h1>
-            <p className="mt-4">{post.content}</p>
+        <div className="flex items-start pt-20 sm:pt-32 justify-center min-h-screen max-w-3xl mx-auto p-6">
+
+            <PostDisplay post={post} />
+
         </div>
     );
 }
