@@ -3,12 +3,12 @@ import {fetchPost} from "@/src/lib/fetch-post";
 import {notFound} from "next/navigation";
 
 interface PostPageProps {
-    params: {id: string};
+    params: Promise<{id: string}>;
 }
 
-export default function PostPage({params}: PostPageProps) {
+export default async function PostPage({params}: PostPageProps) {
 
-    const {id} = params;
+    const {id} = await params;
 
     const post = fetchPost(parseInt(id));
 
