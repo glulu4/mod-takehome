@@ -1,5 +1,6 @@
 import {Post} from '@/public/mod/post'
 import React from 'react'
+import PostRow from './PostRow'
 
 interface HomePagePostsProps {
     paginatedPosts: Post[]
@@ -7,27 +8,20 @@ interface HomePagePostsProps {
 
 export default function HomePagePosts({paginatedPosts}: HomePagePostsProps) {
   return (
-    <div>
         
-        <div>
-            <h2>
-                Posts
-            </h2>
+        <div className='flex flex-col items-start w-full' >
             <ul>
                 {paginatedPosts.map(post => (
                     <li key={post.id}>
-                        <h3>
-                            {post.title}
-                        </h3>
-                        <p>
+                        <PostRow post={post}/>
+                        {/* <p>
                             {post.body}
-                        </p>
+                        </p> */}
                     </li>
                 ))}
             </ul>
         </div>
 
 
-    </div>
   )
 }

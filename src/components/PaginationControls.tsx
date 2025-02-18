@@ -10,7 +10,7 @@ interface PaginationControlsProps {
 export default function PaginationControls({currentPage, setCurrentPage}: PaginationControlsProps) {
 
     const totalPages = Math.ceil(posts.length / PAGE_SIZE);
-    const NUM_PAGES = 3;
+
 
 
     const handlePageChange = (page: number) => {
@@ -44,7 +44,7 @@ export default function PaginationControls({currentPage, setCurrentPage}: Pagina
                 )}
                 
                 {/* Current page */}
-                <span className="bg-blue-500 text-white px-4 py-2 rounded-full">
+                <span className="bg-blue-500 shadow-sm text-white px-4 py-2 rounded-full">
                     {currentPage}
                 </span>
 
@@ -76,7 +76,7 @@ export default function PaginationControls({currentPage, setCurrentPage}: Pagina
                                 onClick={() => handlePageChange(page)}
                                 className={
                                     `px-4 py-2 rounded-full 
-                                    ${currentPage === page ? "bg-blue-500 text-white" : ""
+                                    ${currentPage === page ? "bg-blue-500 text-white shadow-sm" : ""
                                     }`}>
                                 {page}
                             </button>
