@@ -12,7 +12,7 @@ export default function PostRow({post}: PostRowProps) {
 
 
   return (
-      <Link href={`/${post.id}`} className="block mx-auto ">
+      <Link href={`/${post.id}`} className="block mx-auto w-5/6 ">
           <div className='border-b  border-gray-300 dark:border-neutral-600 w-full py-5 px-2 hover:shadow-lg hover:rounded-md transition duration-200 ease-in-out'>
               <div className='flex-1 flex items-center justify-between '>
                   <div className='space-y-3 flex-[0.7]'>
